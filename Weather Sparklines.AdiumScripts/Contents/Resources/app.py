@@ -1,10 +1,20 @@
 import math
 import scipy
+import argparse
 import forecastio
 
 # Get your own API key at https://developer.forecast.io/
-forecast = forecastio.Forecastio("051018b7f7b57f1c08edc4898acbb9da")
-result = forecast.loadForecast(41.9402,-87.6454)
+parser = argparse.ArgumentParser()
+parser.add_argument("lat", type=float)
+parser.add_argument("lon", type=float)
+parser.add_argument("apikey", type=str)
+args = parser.parse_args()
+lat = args.lat
+lon = args.lon
+apikey = args.apikey
+
+forecast = forecastio.Forecastio(apikey)
+result = forecast.loadForecast(lat, lon)
 byHour = forecast.getHourly()
 hourtemps = []
 for h, hourlyData in enumerate(byHour.data):

@@ -55,7 +55,7 @@ point = minscale
 bins = []
 
 for mean in segmeans:
-	for i in range(0,len(ticks)):
+	for i in range(1,len(ticks)+1):
 		point += binsize
 		if mean < point:
 			bins.append(i)

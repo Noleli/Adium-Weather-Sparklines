@@ -17,3 +17,9 @@ I deliberately made the sparkline only 8 characters long instead of the 9 that w
 ### Details
 
 This probably isn’t really robust enough for a public release, so I’m just throwing it out here. 
+
+### Credits
+
+Weather data from [Forecast.io](http://forecast.io).
+
+Python wrapper for the Forecast.io API from Github user ZeevG. https://github.com/ZeevG/python-forcast.io

@@ -47,7 +47,8 @@ for seg in segdata:
 minscale = int(min(segmeans))/10*10
 maxscale = int(max(segmeans))/10*10+10
 
-ticks = {1: u'\u2581', 2: u'\u2582', 3: u'\u2583', 4: u'\u2584', 5: u'\u2585', 6: u'\u2586', 7: u'\u2587', 8: u'\u2588'}
+# ticks = {1: u'\u2581', 2: u'\u2582', 3: u'\u2583', 4: u'\u2584', 5: u'\u2585', 6: u'\u2586', 7: u'\u2587', 8: u'\u2588'}
+ticks = {1: u'\u2581', 2: u'\u2582', 3: u'\u2583', 4: u'\u2585', 5: u'\u2586', 6: u'\u2587'}
 
 binsize = float(maxscale-minscale)/len(ticks)
 point = minscale

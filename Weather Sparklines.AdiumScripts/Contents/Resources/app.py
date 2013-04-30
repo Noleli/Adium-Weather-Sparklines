@@ -1,5 +1,4 @@
 import math
-import scipy
 import argparse
 import forecastio
 
@@ -43,7 +42,7 @@ while len(segdata) > nsegs:
 	segdata.pop()
 
 for seg in segdata:
-	segmeans.append(scipy.mean(seg))
+	segmeans.append(sum(seg)/len(seg))
 
 minscale = int(min(segmeans))/10*10
 maxscale = int(max(segmeans))/10*10+10

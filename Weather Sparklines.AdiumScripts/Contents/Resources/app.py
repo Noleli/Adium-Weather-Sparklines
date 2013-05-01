@@ -1,3 +1,4 @@
+import os
 import math
 import json
 import argparse
@@ -6,6 +7,9 @@ import forecastio
 
 # ticks = {1: u'\u2581', 2: u'\u2582', 3: u'\u2583', 4: u'\u2584', 5: u'\u2585', 6: u'\u2586', 7: u'\u2587', 8: u'\u2588'}
 ticks = {1: u'\u2581', 2: u'\u2582', 3: u'\u2583', 4: u'\u2585', 5: u'\u2586', 6: u'\u2587'}
+
+path = os.environ["HOME"] + "/Library/Application Support/Adium 2.0/Scripts/Weather Sparklines.AdiumScripts/Contents/Resources/" # os.getcwd() + "/"
+os.chdir(path)
 
 with open('local.json', 'rb') as datafile:
 	data = json.load(datafile)
